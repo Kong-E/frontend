@@ -1,6 +1,6 @@
 import { Box, Text } from '@radix-ui/themes';
 import CommonButton from '@/components/common/CommonButton';
-import { usePwUpdateStore } from '@/store/memberStore';
+import { usePwUpdateStore } from '@/stores/memberStore';
 import { useState } from 'react';
 import { isValidPassword } from '@/utils/validateUtils';
 
@@ -66,7 +66,7 @@ export default function PwUpdateForm({ onUpdate }: IUpdateForm) {
   };
 
   return (
-    <Box className="form_box">
+    <Box className="form_box" p="1">
       <form onSubmit={submitHandler}>
         <Box className="row">
           <Text as="label" weight="medium">
